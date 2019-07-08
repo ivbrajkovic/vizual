@@ -1,0 +1,148 @@
+/* Header
+-------------------------------------------------- */
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.header-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+
+  div {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  div:nth-child(1) {
+    margin-left: -15%;
+  }
+
+  div:nth-child(3) {
+    margin-left: 15%;
+  }
+}
+
+@media (min-width: 360px) {
+  .header-contacts {
+    flex-direction: row;
+    justify-content: space-around;
+
+    div:nth-child(1),
+    div:nth-child(3) {
+      margin-left: 0;
+    }
+  }
+}
+
+/* > 576px
+-------------------------------------------------- */
+
+@media (min-width: 576px) {
+  header .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-direction: row;
+
+    img {
+      width: 60%;
+    }
+  }
+
+  .header-contacts {
+    padding: 0;
+    // max-width: 200px;
+    align-items: flex-end;
+    flex-direction: column;
+
+    div {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  #phone-1 {
+    margin: 3px 0;
+  }
+}
+
+/* > 768px
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  header .container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .header-contacts div {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+/* > 992px
+-------------------------------------------------- */
+
+@media (min-width: 992px) {
+  header .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .header-contacts {
+    div {
+      font-size: 32px;
+      line-height: 36px; /* Tune line "margin" here */
+    }
+  }
+}
+
+/* > 1200px
+-------------------------------------------------- */
+
+@media (min-width: 1200px) {
+  header .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .header-contacts {
+    div {
+      font-size: 38px;
+      line-height: 42px;
+    }
+  }
+}
+
+/* Bottom line
+-------------------------------------------------- */
+
+.line {
+  height: 4px;
+  background-color: #858585;
+}
+
+@media (min-width: 992px) {
+  .line {
+    height: 6px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .line {
+    height: 8px;
+  }
+}

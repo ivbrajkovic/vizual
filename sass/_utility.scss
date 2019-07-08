@@ -1,0 +1,74 @@
+/* Utility classes
+-------------------------------------------------- */
+
+.img-fluid {
+  width: 100%;
+  /* height: auto; */
+  object-fit: cover;
+}
+
+.center-in-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box {
+  background-color: rgb(25, 145, 1);
+  color: #fff;
+  /*border-radius: 5px;*/
+  padding: 20px;
+  font-size: 150%;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.hide {
+  display: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.background-blue {
+  background-color: blue;
+}
+.background-red {
+  background-color: red;
+}
+.background-green {
+  background-color: green;
+}
+.background-yellow {
+  background-color: yellow;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.blue {
+  color: blue;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}

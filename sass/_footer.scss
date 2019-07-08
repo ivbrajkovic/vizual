@@ -1,0 +1,41 @@
+/* Footer
+-------------------------------------------------- */
+
+footer {
+  padding: 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+}
+
+@media (min-width: 576px) {
+  footer {
+    padding: 22px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  footer {
+    padding: 24px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  footer {
+    padding: 40px;
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1200px) {
+  footer {
+    padding: 50px;
+    font-size: 28px;
+  }
+}

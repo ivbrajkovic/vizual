@@ -1,0 +1,144 @@
+/* About
+-------------------------------------------------- */
+.about {
+  padding: 20px 0;
+  text-align: center;
+  background: url(/src/img/razno/bg-l.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.about-grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'picture'
+    'text';
+
+  .item-text {
+    grid-area: text;
+
+    .title {
+      display: inline-block;
+      margin: 10px 0;
+      font-size: 0.8em;
+      background-color: $about-title-back;
+      box-shadow: 10px 0 0 0 $about-title-back, -10px 0 0 0 $about-title-back;
+
+      span {
+        color: #fff;
+        font-size: 36px;
+        line-height: 0.9;
+      }
+    }
+
+    .content span {
+      // background-color: var(--about-content-back);
+      // box-shadow: 10px 0 0 0 var(--about-content-back), -10px 0 0 0 var(--about-content-back);
+      line-height: 1.4; /* Tune line "margin" here */
+      font-size: 20px;
+    }
+  }
+
+  .item-picture img {
+    width: 70%;
+  }
+}
+
+/* > 576px
+-------------------------------------------------- */
+
+@media (min-width: 576px) {
+  .about-grid-container {
+    .item-text {
+      .title span {
+        font-size: 40px;
+      }
+
+      .content span {
+        font-size: 22px;
+        line-height: 1;
+      }
+    }
+  }
+}
+
+/* > 768px
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  .about-grid-container {
+    .item-text {
+      .title span {
+        font-size: 44px;
+      }
+
+      .content span {
+        font-size: 24px;
+        line-height: 1;
+      }
+    }
+
+    .item-picture img {
+      width: 60%;
+    }
+  }
+}
+
+/* > 992px
+-------------------------------------------------- */
+
+@media (min-width: 992px) {
+  .about {
+    height: 310px;
+    padding: 20px 0;
+    background: url(/src/img/razno/bg.jpg);
+  }
+
+  .about-grid-container {
+    grid-template-columns: 50% auto;
+    grid-template-areas: 'text picture';
+
+    .item-text {
+      text-align: start;
+    }
+
+    .item-picture img {
+      width: 100%;
+    }
+  }
+}
+
+/* > 1200px
+-------------------------------------------------- */
+
+@media (min-width: 1200px) {
+  .about {
+    height: 380px;
+    padding: 35px 0;
+  }
+
+  .about-grid-container {
+    .item-text {
+      width: 105%;
+
+      .title span {
+        font-size: 54px;
+      }
+
+      .content span {
+        font-size: 28px;
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+/* > 1320px
+-------------------------------------------------- */
+
+/* @media (min-width: 1320px) {
+	#about .item-picture img {
+		width: auto;
+	}
+} */

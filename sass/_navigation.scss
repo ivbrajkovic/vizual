@@ -1,0 +1,192 @@
+/* Menu
+-------------------------------------------------- */
+nav {
+  padding: 20px 0;
+}
+
+nav .active {
+  background-color: #ff720a !important;
+}
+
+.nav-list {
+  width: 100%;
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(auto, 137px));
+  justify-content: center;
+  grid-gap: 16px;
+
+  list-style: none;
+}
+
+.nav-links {
+  width: 137px;
+  height: 183px;
+
+  color: #fff;
+  background-color: #232323;
+  border: 4px solid #060606;
+  font-size: 16px;
+
+  text-decoration: none;
+
+  .items {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .image {
+      background: #fff;
+
+      img {
+        width: 100%;
+        margin-bottom: -5px;
+      }
+    }
+
+    .text {
+      height: 100%;
+    }
+  }
+}
+
+/* Media > 360px
+-------------------------------------------------- */
+
+@media (min-width: 360px) {
+  .nav-list {
+    grid-gap: 30px;
+  }
+}
+
+/* Media > 768px
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  nav {
+    padding: 30px 0;
+  }
+
+  .nav-list {
+    grid-template-columns: repeat(auto-fit, minmax(auto, 150px));
+    grid-gap: 30px;
+  }
+
+  .nav-links {
+    font-size: 18px;
+    width: 150px;
+    height: 201px;
+  }
+}
+
+/* Media > 992px
+-------------------------------------------------- */
+
+@media (min-width: 992px) {
+  .nav-list {
+    grid-template-columns: repeat(auto-fit, minmax(auto, 205px));
+    grid-gap: 35px;
+  }
+
+  .nav-links {
+    font-size: 24px;
+    width: 205px;
+    height: 275px;
+
+    .items .image img {
+      width: 100%;
+      margin-bottom: -7px;
+    }
+  }
+}
+
+/* Media > 1200px
+-------------------------------------------------- */
+
+@media (min-width: 1200px) {
+  nav.container {
+    padding: 60px 0;
+  }
+
+  .nav-list {
+    grid-template-columns: repeat(auto-fit, minmax(auto, 274px));
+    grid-gap: 30px;
+  }
+
+  .nav-links {
+    font-size: 30px;
+    width: 274px;
+    height: 367px;
+
+    .items .image img {
+      width: 100%;
+      margin-bottom: -9px;
+    }
+  }
+}
+
+/*!
+ * Hover.css (http://ianlunn.github.io/Hover/)
+ * Version: 2.3.2
+ * Author: Ian Lunn @IanLunn
+ * Author URL: http://ianlunn.co.uk/
+ * Github: https://github.com/IanLunn/Hover
+ * Hover.css Copyright Ian Lunn 2017. Generated with Sass.
+ */
+
+/* Sweep To Bottom */
+
+.hvr-sweep-to-bottom {
+  /* color: #ff720a; */
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-sweep-to-bottom:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: #ff720a;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.nav-links.active .hvr-sweep-to-bottom,
+.nav-links:hover .hvr-sweep-to-bottom,
+.nav-links:focus .hvr-sweep-to-bottom,
+.nav-links:active .hvr-sweep-to-bottom {
+  color: white;
+}
+
+.nav-links.active .hvr-sweep-to-bottom:before,
+.nav-links:hover .hvr-sweep-to-bottom:before,
+.nav-links:focus .hvr-sweep-to-bottom:before,
+.nav-links:active .hvr-sweep-to-bottom:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
