@@ -22,7 +22,7 @@
 -------------------------------------------------- */
 
 .contact-form {
-  text-align: center;
+  text-align: start;
   outline: none;
 
   h2 {
@@ -127,7 +127,7 @@
 
   .links {
     max-width: 90%;
-    margin-top: 16px;
+    margin: 16px 0;
     color: rgba(255, 255, 255, 0.9);
 
     img {
@@ -137,6 +137,7 @@
     }
 
     h2 {
+      margin-top: 10px;
       font-size: 16px;
       font-weight: 300;
       color: rgba(255, 255, 255, 0.9);
@@ -190,7 +191,7 @@
   .contact {
     padding: 26px;
 
-    .flex {
+    .container {
       flex-direction: row;
     }
   }
@@ -199,7 +200,11 @@
     width: 50%;
 
     h2 {
-      font-size: 2.7em;
+      font-size: 38px;
+    }
+
+    button {
+      font-size: 20px;
     }
   }
 
@@ -210,13 +215,13 @@
 
     .links {
       img {
-        max-height: 100px;
-        max-width: 100px;
+        max-height: 55px;
+        max-width: 60px;
       }
 
       h2 {
         display: block;
-        font-size: 1.7em;
+        font-size: 24px;
       }
     }
   }
@@ -228,5 +233,31 @@
 @media (min-width: 1200px) {
   .contact-form {
     max-width: 570px;
+  }
+
+  .contact-form {
+    width: 50%;
+
+    h2 {
+      font-size: 43px;
+    }
+
+    button {
+      font-size: 20px;
+    }
+  }
+
+  .contact-links-container {
+    .links {
+      img {
+        max-height: 100px;
+        max-width: 100px;
+      }
+
+      h2 {
+        display: block;
+        font-size: 24px;
+      }
+    }
   }
 }
