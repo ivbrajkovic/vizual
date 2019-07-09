@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "start:dev": "DEBUG=vizual:* nodemon --config ./nodemon.json ./bin/www",
-    "start:prod": "NODE_ENV=production node --config ./nodemon.json ./bin/www"
+    "build": "NODE_ENV=production node ./bin/www",
+    "dev": "DEBUG=vizual:* nodemon --config ./nodemon.json ./bin/www",
+    "prod": "NODE_ENV=production node --config ./nodemon.json ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
