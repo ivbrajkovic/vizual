@@ -10,7 +10,7 @@ router.get('/test', function(req, res, next) {
   fsPromises
     .readdir(__dirname + '/../public/images/linkovi')
     .then(files => {
-      // console.log('TCL: files', files);
+      // // console.log('TCL: files', files);
 
       let matches;
       let obj = {};
@@ -44,13 +44,13 @@ router.get('/gallery/:kategorija', function(req, res, next) {
     // .readdir(__dirname + '/../public/images/linkovi')
     .readdir('./public/images/' + req.params.kategorija)
     .then(files => {
-      console.log('TCL: files', files);
+      // console.log('TCL: files', files);
 
       let obj = {};
       files.forEach(el => {
         obj[el.match(/^(.*)\./)[1]] = el;
       });
-      console.log('TCL: obj', obj);
+      // console.log('TCL: obj', obj);
 
       res.render('gallery', {
         data: {
