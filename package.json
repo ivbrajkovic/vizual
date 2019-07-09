@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "DEBUG=vizual:* nodemon --config ./nodemon.json ./bin/www",
+    "start": "node ./bin/www",
+    "start:dev": "DEBUG=vizual:* nodemon --config ./nodemon.json ./bin/www",
     "start:prod": "NODE_ENV=production node --config ./nodemon.json ./bin/www"
   },
   "dependencies": {
