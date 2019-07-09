@@ -2,88 +2,41 @@ extends layout
 
 block content
 
-  //- Header
+  // Header
   header
     .container
       img.slide-right(src='images/razno/logo-visual.png', alt='')
       .header-contacts
-        #email.slide-left-1 info@vizual.hr
-        #phone-1.slide-left-2 T: 052 642 345
-        #phone-2.slide-left-3 M: 099 283 6360
+        #email.slide-left.delay-1 info@vizual.hr
+        #phone-1.slide-left.delay-2 T: 052 642 345
+        #phone-2.slide-left.delay-3 M: 099 283 6360
     .line
 
-  //- Carousel
+  // Carousel
   section.carousel
     img(src='images/razno/slider1.jpg', alt='Slider')
 
-  //-div= files
+  // Navigation
+  nav.container
+    ul.nav-list
+      //- Loop through object data
+        each key, index in data
+          div= key.title
+          div= key.thumb
+          div= index
 
-  - const regex = /-(.*)\./g;
-  each file in files
+      each key, element in data
+        li.nav-links.hover13
+          //- a(href='gallery.html')
+          a(href='gallery/' + element)
+            .items
+              .image
+                //- img(src='images/linkovi/' + file, alt='')
+                img(src='images/linkovi/' + key.thumb, alt='')
+              //- .text.hvr-sweep-to-bottom= title
+              .text.hvr-sweep-to-bottom= key.title
 
-    nav.container
-      ul.nav-list
-        li.nav-links.hover13
-          a(href='gallery.html')
-            .items
-              .image
-                img(src='images/linkovi/' + file, alt='')
-              .text.hvr-sweep-to-bottom= regex.exec(file)
-                //-| REKLAME
-
-
-      //       
-        li.nav-links.hover13
-          a(href='gallery.html')
-            .items
-              .image
-                img(src='src/img/linkovi/kategorija-signalizacija.jpg', alt='')
-              .text.hvr-sweep-to-bottom
-                | CESTOVNA SIGNALIZACIJA
-        li.nav-links.hover13
-          a(href='gallery.html')
-            .items
-              .image
-                img(src='src/img/linkovi/kategorija-luxsignalizacija.jpg', alt='')
-              .text.hvr-sweep-to-bottom
-                | LUKSUZNA ALU. SIGNALIZACIJA
-        li.nav-links.hover13
-          a(href='gallery.html')
-            .items
-              .image
-                img(src='src/img/linkovi/kategorija-plovila.jpg', alt='')
-              .text.hvr-sweep-to-bottom
-                | OSLIKAVANJE PLOVILA
-        li.nav-links.hover13
-          a(href='gallery.html')
-            .items
-              .image
-                img(src='src/img/linkovi/kategorija-vozila.jpg', alt='')
-              .text.hvr-sweep-to-bottom
-                | OSLIKAVANJE VOZILA
-        li.nav-links.hover13
-          a(href='gallery.html')
-            .items
-              .image
-                img(src='src/img/linkovi/kategorija-fototapete.jpg', alt='')
-              .text.hvr-sweep-to-bottom
-                | FOTOTAPETE
-        li.nav-links.hover13
-          a(href='gallery.html')
-            .items
-              .image
-                img(src='src/img/linkovi/kategorija-majice.jpg', alt='')
-              .text.hvr-sweep-to-bottom
-                | TISAK NA MAJICE
-        li.nav-links.hover13
-          a(href='gallery.html')
-            .items
-              .image
-                img(src='src/img/linkovi/kategorija-stalci.jpg', alt='')
-              .text.hvr-sweep-to-bottom
-                | STALCI, ROLL-UP
-
-  //- About
+  // About
   section.about
     .container
       .about-grid-container
@@ -100,14 +53,11 @@ block content
         .item-picture
           img(src='images/razno/img-printer.png', alt='')
 
-  //- Contact
-  #contact
-    // <div class="container grid">
-    .container.flex
+  // Contact
+  section.contact
+    .container
       form.contact-form(method='POST')
         h2 Kontaktirajte nas
-        // <div class="grid">
-        // <div>
         .flex
           .form-group.relative.focusable
             input(type='text', name='ime', placeholder='ime')
@@ -122,9 +72,10 @@ block content
           textarea(rows='30', name='poruka', placeholder='poruka')
           .bar
         .form-group
-          button(type='submit') POŠALJI
+          //-button(type='submit') POŠALJI
+          button POŠALJI
 
-      .links-container
+      .contact-links-container
         .links
           img(src='images/razno/location.png', alt='')
           h2 Ul. Družbe Sv. Ćirila i Metoda, Pazin

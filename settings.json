@@ -1,0 +1,36 @@
+{
+  "kategorija": {
+    "reklame": {
+      "title": "REKLAME",
+      "thumb": "kategorija-reklame.jpg"
+    },
+    "signalizacija": {
+      "title": "CESTOVNA SIGNALIZACIJA",
+      "thumb": "kategorija-signalizacija.jpg"
+    },
+    "luxsignalizacija": {
+      "title": "LUKSUZNA ALU. SIGNALIZACIJA",
+      "thumb": "kategorija-luxsignalizacija.jpg"
+    },
+    "plovila": {
+      "title": "OSLIKAVANJE PLOVILA",
+      "thumb": "kategorija-plovila.jpg"
+    },
+    "vozila": {
+      "title": "OSLIKAVANJE VOZILA",
+      "thumb": "kategorija-vozila.jpg"
+    },
+    "fototapete": {
+      "title": "FOTOTAPETE",
+      "thumb": "kategorija-fototapete.jpg"
+    },
+    "majice": {
+      "title": "TISAK NA MAJICE",
+      "thumb": "kategorija-majice.jpg"
+    },
+    "stalci": {
+      "title": "STALCI, ROLL-UP",
+      "thumb": "kategorija-stalci.jpg"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+
+    title Galerija
+
+    link(rel='stylesheet', href='/stylesheets/gallery.min.css')
+
+    body
+      a.arrow-container(href="/")
+        .arrow-left
+      //-
+        article.gallery
+          - var i
+          each val in [1081, 1014, 267, 266, 634, 923, 682, 173, 943]
+            - var height= 200 * (Math.floor(Math.random() * (8 - 5 + 1) ) + 5)
+            - var width=  200 * (Math.floor(Math.random() * (8 - 5 + 1) ) + 5)
+            a.gallery-link(href = 'https://unsplash.it/' + width + '/' + height + '?image=' + val)
+              figure.gallery-image
+                img(src='https://unsplash.it/' + width + '/' + height + '?image=' + val, style='width: ' + width + '; height: ' + height)
+                figcaption Photo caption
+
+      article.gallery
+        - obj = data.src
+        each key, element in obj
+          //-a.gallery-link(href = 'https://unsplash.it/' + width + '/' + height + '?image=' + val)
+          figure.gallery-image
+            img(src='/images/' + data.dir + key)
+            //- figcaption Photo caption
+            figcaption= element
